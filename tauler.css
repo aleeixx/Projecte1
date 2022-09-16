@@ -1,0 +1,22 @@
+body{
+    background-image: url("imatges/fons.jpg")
+}
+
+#dTable{
+    margin: 0 auto;
+    width: 50%;
+}
+
+table{
+    text-align: center;
+    padding: 5em;
+}
+img{
+    width: 100%;
+}
+.poker{
+    display: none;
+}
+.parella{
+    
+}

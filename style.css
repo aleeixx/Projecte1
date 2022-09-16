@@ -1,0 +1,59 @@
+body {
+  
+  background-image: url("imatges/fons.jpg")
+}
+
+.formulari {
+  width: 400px;
+  margin: 16px auto;
+  margin-top: 5em;
+  font-size: 16px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.form-header,
+.formulari p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+.form-header {
+  background: rgb(53, 35, 102);
+  padding: 1em;
+  font-size: 1.4em;
+  text-align: center;
+  color: #fff;
+}
+
+.form-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.formulari p {
+  padding: 12px;
+}
+
+.formulari input,.formulari select {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+
+
+.formulari input[type="submit"] {
+  background: rgb(53, 35, 102);
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}

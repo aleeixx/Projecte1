@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Joc de Cartes</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+
+
+
+  <div class="formulari">
+    
+    
+    <h2 class="form-header">MEMORY FORM</h2>
+  
+    <form class="form-container" action="tauler.php" method="post">
+      <p><input type="text" id="fname" name="columnes" placeholder="Columns" class="iMida"></p>
+      <p><input type="text" id="lname" name="files" placeholder="Rows" class="iMida" ></p>
+      <p><input type="number" placeholder="Time you'll have to choose a couple (seconds)" id="time" name="time" min="0"></p>
+      <p>
+        <select id="Family" name="Family"><br>
+          <option disabled selected hidden>Choose a Category...</option>
+          <option value="Animals">Animals</option>
+          <option value="Food">Food</option>
+        </select>
+      </p>
+
+      <p>
+        <select id="players" name="players">
+          <option disabled selected hidden>Choose how many players are going to play...</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </p>
+      <p><input type="submit" value="Submit" id="boto"></p>
+    </form>
+  </div>
+
+
+</body>
+</html>
