@@ -2,6 +2,7 @@
  <head>
   <title>Prova</title>
   <link rel="stylesheet" href="tauler.css" type="text/css">
+  <script src="program.js"></script>
  </head>
  <body>
  <?php 
@@ -136,4 +137,6 @@ else{
 
  ?>
  </body>
+
+
 </html>
