@@ -94,7 +94,7 @@ for ($i=0; $i < $_POST["files"]; $i++) {
         
         ?>
          
-        <td>
+        <td class="cela">
             <!---         <img src='imatges/animals/couple1.png' class='parella'> 
             
             rand(0,count($imatges))

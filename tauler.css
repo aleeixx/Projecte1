@@ -15,10 +15,14 @@ img{
     width: 100%;
 }
 .poker{
-    display: none;
+    
 }
 .parella{
     
+}
+
+.amaga{
+    display: none;
 }
 
 
