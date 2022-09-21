@@ -18,14 +18,18 @@ img{
     
 }
 .parella{
-    
 }
 
 .amaga{
     display: none;
 }
 
+td{
+    padding: 2em;
+    background-color: white;
+}
 
+/* en cas de error.... */
 
 
 #malament{
@@ -56,4 +60,4 @@ a {
     color: black;
   }
 
- 
+ /*

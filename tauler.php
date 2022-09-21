@@ -107,7 +107,7 @@ for ($i=0; $i < $_POST["files"]; $i++) {
             
             --->
 
-        <img src="imatges/<?php echo strtolower($familia."/".$imatges[$contador]); ?>" alt="" class="parella">
+        <img src="imatges/<?php echo strtolower($familia."/".$imatges[$contador]); ?>" alt="" class="parella amaga">
         <img src='imatges/as.png' class='poker'>
         </td>
 

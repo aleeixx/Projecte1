@@ -24,13 +24,15 @@ window.addEventListener("load", function(event) {
 
   }
 var taula =  document.querySelectorAll(".cela");
-var arrayImatges = document.querySelectorAll(".parella");
+//var arrayImatges = document.querySelectorAll(".parella");
 
 for (let i = 0; i < taula.length; i++) {
   taula[i].addEventListener("click",Mostra);
-  arrayImatges[i].classList.add("amaga");
+  //arrayImatges[i].classList.add("amaga");
 
 }
+
+
 
   });
 
