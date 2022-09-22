@@ -94,7 +94,7 @@ for ($i=0; $i < $_POST["files"]; $i++) {
         
         ?>
          
-        <td class="cela" id="<?php echo $contador ?>">
+        <td class="cela">
             <!---         <img src='imatges/animals/couple1.png' class='parella'> 
             
             rand(0,count($imatges))
@@ -107,7 +107,7 @@ for ($i=0; $i < $_POST["files"]; $i++) {
             
             --->
 
-        <img src="imatges/<?php echo strtolower($familia."/".$imatges[$contador]); ?>" alt="" class="parella amaga">
+        <img src="imatges/<?php echo strtolower($familia."/".$imatges[$contador]); ?>" alt=""  id="<?php echo $contador ?>" class="parella amaga">
         <img src='imatges/as.png' class='poker'>
         </td>
 
