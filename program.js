@@ -3,11 +3,11 @@ window.addEventListener("load", function (event) {
 
 
 
-  jugadors.forEach(element => {
-    console.log(element);
-  });
+  // jugadors.forEach(element => {
+  //   console.log(element);
+  // });
 
-  console.log(parelles);
+  // console.log(parelles);
 
   var puntuacions = new Array(jugadors.length);
 
@@ -22,13 +22,63 @@ window.addEventListener("load", function (event) {
 
 
 
+  //recollir dades de div i inserir dades a tauler
+
+  var dades = document.querySelector("#dades");
+  var dinsDivJugador = " ";
+  dades.innerHTML = " ";
+
+  for (let k = 1; k <= jugadors.length; k++) {
+          
+    //console.log(onInserirNoms);
+    dades.innerHTML += 
+    '<div id="jugador'+k+'"></div>';
+    
+    for (let l = 0; l < 1; l++) {
+          
+      //console.log(onInserirNoms);
+      dinsDivJugador = document.querySelector('#jugador'+k);
+      console.log(dinsDivJugador);
+
+      dinsDivJugador.innerHTML =       
+
+      '<div id="jugador'+k+'nom"><h1>'+jugadors[k-1]+'</h1></div>'+
+      '<div id="jugador'+k+'contenidorContador">'+
+        '<div id="jugador'+k+'contadorTitol" class="titols"><h1>Contador</h1></div>'+
+        '<div id="jugador'+k+'contador" class="numeros">0</div>'+
+      '</div>'+
+      '<div id="jugador'+k+'contenidorPuntuacio">'+
+        '<div id="jugador'+k+'PuntuacioTitol" class="titols"><h1>Puntuació</h1></div>'+
+        '<div id="jugador'+k+'puntuacio" class="numeros">0</div>'+
+      '</div>';
+     
+
+    }
+    
+  }
+
+
+
+
+
+
+
+  //modPuntuacio = document.querySelector('#jugador'+k+'contador');
+  var modParellesTrobades = " ";
+
+
+  ////
+
+
   for (let i = 0; i < taula.length; i++) {
     taula[i].addEventListener("click", Mostra);
     //taula[i].removeEventListener("click");
   }
 
   var torn = 0;
-  var contadorParellesTrobades = 0;
+  var parellaTrobada = 0;
+  var contadorParellaTrobada = 0;
+
 
   //per cada cop que sigui torn 1 pujarà el contador
   var quinJugador = 0;
@@ -88,7 +138,7 @@ window.addEventListener("load", function (event) {
     torn++;
 
 //després de les dos primeres fa torn 3 o 4 o 5 o 6 que no està especificat. de manera que funciona.
-    console.log("torn "+torn);
+    //console.log("torn "+torn);
 
     var cartaImatge = this.querySelector(".parella");
     var cartapoker = this.querySelector(".poker");
@@ -110,6 +160,8 @@ window.addEventListener("load", function (event) {
         }
         // console.log("jug num act"+quinJugador)
 
+        console.log("Jugador: "+jugadors[quinJugador-1]);
+        //console.log("torn "+torn);
 
         carta1SRC = cartaImatge.getAttribute('src');
         carta1 = cartaImatge;
@@ -126,6 +178,7 @@ window.addEventListener("load", function (event) {
 
       case 2:
 
+        //console.log("torn "+torn);
         carta2SRC = cartaImatge.getAttribute('src');
         carta2 = cartaImatge;
         carta2Poker = cartapoker;
@@ -144,9 +197,17 @@ window.addEventListener("load", function (event) {
             console.log("es la mateixa");
             cela1.removeEventListener("click", Mostra);
             cela2.removeEventListener("click", Mostra);
-            contadorParellesTrobades++;
-            puntuacions[quinJugador-1]+=contadorParellesTrobades;
-            contadorParellesTrobades=0;
+            parellaTrobada++;
+            puntuacions[quinJugador-1]+=parellaTrobada;
+
+            modParellesTrobades = document.querySelector('#jugador'+quinJugador+'puntuacio');
+
+            console.log(modParellesTrobades);
+
+            modParellesTrobades.innerHTML = puntuacions[quinJugador-1];
+
+
+            parellaTrobada=0;
             torn = 0;
 
 
@@ -163,14 +224,17 @@ window.addEventListener("load", function (event) {
           pausa(carta1, carta2, carta1Poker, carta2Poker);
         }
 
+        console.log("Puntuació: "+puntuacions[quinJugador-1]);
         break;
+
+
     }
 
 
 
 
-    console.log("Jugador: "+jugadors[quinJugador-1]);
-    console.log("Puntuació: "+puntuacions[quinJugador-1]);
+    // console.log("Jugador: "+jugadors[quinJugador-1]);
+    // console.log("Puntuació: "+puntuacions[quinJugador-1]);
 
 
 
@@ -183,7 +247,7 @@ window.addEventListener("load", function (event) {
 
 
 
-    if (contadorParellesTrobades==parelles) {
+    if (contadorParellaTrobada==parelles) {
       console.log("JOC ACABAT")
      }
   }

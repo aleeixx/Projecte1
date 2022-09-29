@@ -8,7 +8,9 @@ $imatges = array("couple1.png",
                  "couple5.png",  
                  "couple6.png",
                  "couple7.png",
-                 "couple8.png"
+                 "couple8.png",
+                 "couple9.png",
+                 "couple10.png"
                 );
 //Guardem la categoria que ens hauran passat pel formulari
 $familia=$_POST["Family"];
@@ -32,7 +34,7 @@ if($familia=="Random"){
 //Si el número no és parell/múltiple de dos...
 
 //falla si poses 6 per 4 pq 24 la meitat es 12 i no hi ha tants elements a larray max 8 es a dir 4*4 que es 16 i son 8 parelles el num delements de larray
-if($_POST["columnes"]*$_POST["files"]%2==0 and $_POST["columnes"]*$_POST["files"]<=16 and $_POST["columnes"]*$_POST["files"]>1 and $_POST["columnes"]==$_POST["files"]){
+if($_POST["columnes"]*$_POST["files"]%2==0 and $_POST["columnes"]*$_POST["files"]<=16 and $_POST["columnes"]*$_POST["files"]>1){
 
     
 
@@ -89,11 +91,19 @@ PROVES:
     let parelles=<?php echo $nParelles;?>;
 
 
-    console.log(jugadors);
+    // console.log(jugadors);
   </script>
   <script src="program.js"></script>
  </head>
  <body>
+
+
+ <div id="dades">
+
+    
+
+
+ </div>
  <?php 
 
 

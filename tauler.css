@@ -3,8 +3,28 @@ body{
 }
 
 #dTable{
-    margin: 0 auto;
+    display: inline-block;
+    margin-left: 40px;
+    /*margin: 0 auto;*/
     width: 50%;
+    
+}
+
+
+
+#dades{
+    display: inline-block;
+    color: white;
+}
+
+.titols{
+    display: inline-block;
+    font-size: 0.800em;
+}
+.numeros{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-left: 1em;
 }
 
 table{
