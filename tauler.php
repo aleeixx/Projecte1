@@ -1,11 +1,5 @@
-<html>
- <head>
-  <title>Prova</title>
-  <link rel="stylesheet" href="tauler.css" type="text/css">
-  <script src="program.js"></script>
- </head>
- <body>
- <?php 
+<?php 
+
 //Crearem un array on guardarem un string amb el nom de les imatges
 $imatges = array("couple1.png", 
                  "couple2.png", 
@@ -19,10 +13,9 @@ $imatges = array("couple1.png",
 //Guardem la categoria que ens hauran passat pel formulari
 $familia=$_POST["Family"];
 
-/*
-En cas de que sigui random generarem un número aleatori entre el 0 i l'1 i que segons el que surti la categoria sigui igual a 
-Animals o Food
-*/
+$jugadors=$_POST["nomJugador"];
+
+
 if($familia=="Random"){
     
     switch (rand(0, 1)) {
@@ -83,6 +76,45 @@ PROVES:
     $contador = 0;
 
 
+
+
+?>
+
+<html>
+ <head>
+  <title>Prova</title>
+  <link rel="stylesheet" href="tauler.css" type="text/css">
+  <script>
+    let jugadors=<?php echo json_encode($jugadors);?>;
+    let parelles=<?php echo $nParelles;?>;
+
+
+    console.log(jugadors);
+  </script>
+  <script src="program.js"></script>
+ </head>
+ <body>
+ <?php 
+
+
+
+// $jugadors=$_POST["nomJugador"];
+
+// echo json_encode($jugadors);
+
+
+/*
+En cas de que sigui random generarem un número aleatori entre el 0 i l'1 i que segons el que surti la categoria sigui igual a 
+Animals o Food
+*/
+
+
+    
+    
+    
+    //////////////////////
+    
+    
     echo "<div id='dTable'> <table>";
 
 

@@ -2,7 +2,25 @@
 window.addEventListener("load", function (event) {
 
 
+
+  jugadors.forEach(element => {
+    console.log(element);
+  });
+
+  console.log(parelles);
+
+  var puntuacions = new Array(jugadors.length);
+
+  for (let n = 0; n < puntuacions.length; n++) {
+    puntuacions[n]=0;
+    
+  }
+
   var taula = document.querySelectorAll(".cela");
+
+
+
+
 
   for (let i = 0; i < taula.length; i++) {
     taula[i].addEventListener("click", Mostra);
@@ -10,6 +28,13 @@ window.addEventListener("load", function (event) {
   }
 
   var torn = 0;
+  var contadorParellesTrobades = 0;
+
+  //per cada cop que sigui torn 1 pujarà el contador
+  var quinJugador = 0;
+
+
+
   var carta1;
   var carta1SRC;
   var carta1Poker;
@@ -20,7 +45,12 @@ window.addEventListener("load", function (event) {
   var carta2Poker;
   var cela2;
 
+
+
+
  // var llest = true;
+
+
 
 
 
@@ -44,11 +74,21 @@ window.addEventListener("load", function (event) {
   }
 
 
+  
+
   function Mostra() {
 
 
     console.log("click");
+
+    
+
+
+
     torn++;
+
+//després de les dos primeres fa torn 3 o 4 o 5 o 6 que no està especificat. de manera que funciona.
+    console.log("torn "+torn);
 
     var cartaImatge = this.querySelector(".parella");
     var cartapoker = this.querySelector(".poker");
@@ -60,6 +100,17 @@ window.addEventListener("load", function (event) {
     switch (torn) {
       case 1:
         //llest = false;
+        quinJugador++;
+        //console.log("JUG NUM"+quinJugador)
+
+
+        if (quinJugador==jugadors.length+1) {
+          quinJugador=1
+          //console.log("jug num en cas de que es passa"+quinJugador)
+        }
+        // console.log("jug num act"+quinJugador)
+
+
         carta1SRC = cartaImatge.getAttribute('src');
         carta1 = cartaImatge;
         carta1Poker = cartapoker;
@@ -93,7 +144,12 @@ window.addEventListener("load", function (event) {
             console.log("es la mateixa");
             cela1.removeEventListener("click", Mostra);
             cela2.removeEventListener("click", Mostra);
+            contadorParellesTrobades++;
+            puntuacions[quinJugador-1]+=contadorParellesTrobades;
+            contadorParellesTrobades=0;
             torn = 0;
+
+
           }
 
           else {
@@ -110,6 +166,26 @@ window.addEventListener("load", function (event) {
         break;
     }
 
+
+
+
+    console.log("Jugador: "+jugadors[quinJugador-1]);
+    console.log("Puntuació: "+puntuacions[quinJugador-1]);
+
+
+
+    //console.log("Parelles necessàries"+parelles);
+    //console.log("trobades"+contadorParellesTrobades);
+
+
+    
+
+
+
+
+    if (contadorParellesTrobades==parelles) {
+      console.log("JOC ACABAT")
+     }
   }
 });
 //const music = new Audio('prova.mp3');

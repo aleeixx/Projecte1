@@ -16,7 +16,7 @@ window.addEventListener("load", function(event) {
         for (let i = 0; i < numNoms.value; i++) {
           
           //console.log(onInserirNoms);
-          onInserirNoms.innerHTML += '<p><input type="text" id="nomJugador'+(i+1)+'" name="nomJugador'+(i+1)+'" placeholder="Nom Jugador '+(i+1)+'" class="nomsTotals"required></p>';
+          onInserirNoms.innerHTML += '<p><input type="text" id="nomJugador'+(i+1)+'" name="nomJugador[]" placeholder="Nom Jugador '+(i+1)+'" class="nomsTotals"required></p>';
           
           
 
