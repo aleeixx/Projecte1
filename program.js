@@ -9,7 +9,23 @@ window.addEventListener("load", function (event) {
 
   // console.log(parelles);
 
+
+  //jugadors = jugadors.sort(() => Math.random() - 0.5)
+
+
+
+  for (let i = jugadors.length - 1; 0<i; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = jugadors[i];
+    jugadors[i] = jugadors[j];
+    jugadors[j] = temp;
+  }
+
+
   var puntuacions = new Array(jugadors.length);
+
+
+ 
 
   for (let n = 0; n < puntuacions.length; n++) {
     puntuacions[n]=0;
@@ -61,8 +77,6 @@ window.addEventListener("load", function (event) {
 
 
 
-
-
   //modPuntuacio = document.querySelector('#jugador'+k+'contador');
   var modParellesTrobades = " ";
 
@@ -77,7 +91,7 @@ window.addEventListener("load", function (event) {
 
   var torn = 0;
   var parellaTrobada = 0;
-  var contadorParellaTrobada = 0;
+  var parellesTotalsTrobades = 0;
 
 
   //per cada cop que sigui torn 1 pujarà el contador
@@ -197,6 +211,8 @@ window.addEventListener("load", function (event) {
             console.log("es la mateixa");
             cela1.removeEventListener("click", Mostra);
             cela2.removeEventListener("click", Mostra);
+
+            parellesTotalsTrobades++;
             parellaTrobada++;
             puntuacions[quinJugador-1]+=parellaTrobada;
 
@@ -209,7 +225,26 @@ window.addEventListener("load", function (event) {
 
             parellaTrobada=0;
             torn = 0;
+            quinJugador--;
 
+
+
+            if (parellesTotalsTrobades==parelles) {
+              console.log("JOC ACABAT");
+              // window.history.back();
+
+
+             window.location.replace("index.html");
+              // window.location.reload(history.back());
+
+
+              //window.location = document.referrer;
+
+
+              
+              //window.location.reload();
+
+             }
 
           }
 
@@ -247,9 +282,7 @@ window.addEventListener("load", function (event) {
 
 
 
-    if (contadorParellaTrobada==parelles) {
-      console.log("JOC ACABAT")
-     }
+    
   }
 });
 //const music = new Audio('prova.mp3');

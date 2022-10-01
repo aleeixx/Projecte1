@@ -160,6 +160,16 @@ for ($i=0; $i < $_POST["files"]; $i++) {
     
 }
 echo "</table> </div>";
+?>
+<div id="dreta">
+    
+    <div id="contadorTotal">
+
+    </div>
+
+</div>
+
+<?php
 }
 else{
 
