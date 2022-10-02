@@ -10,7 +10,9 @@ body{
     
 }
 
-
+#dreta{
+    background-color: white;
+}
 
 #dades{
     display: inline-block;

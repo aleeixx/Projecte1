@@ -162,7 +162,22 @@ for ($i=0; $i < $_POST["files"]; $i++) {
 echo "</table> </div>";
 ?>
 <div id="dreta">
-    
+
+    <div id="liTocaAContenidor">
+        <div>
+        <h1>
+            Torn de:
+        </h1>
+        </div>
+        
+        <div id="liTocaA">
+
+        </div>
+        
+
+    </div>
+
+
     <div id="contadorTotal">
 
     </div>

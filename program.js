@@ -54,7 +54,7 @@ window.addEventListener("load", function (event) {
           
       //console.log(onInserirNoms);
       dinsDivJugador = document.querySelector('#jugador'+k);
-      console.log(dinsDivJugador);
+      //console.log(dinsDivJugador);
 
       dinsDivJugador.innerHTML =       
 
@@ -89,6 +89,11 @@ window.addEventListener("load", function (event) {
     //taula[i].removeEventListener("click");
   }
 
+
+
+  var segons = 0;
+
+
   var torn = 0;
   var parellaTrobada = 0;
   var parellesTotalsTrobades = 0;
@@ -114,12 +119,54 @@ window.addEventListener("load", function (event) {
 
  // var llest = true;
 
+ var aQuiliToca = document.querySelector('#liTocaA');
+
+ aQuiliToca.innerHTML=jugadors[0];
+ 
+
+ var contadorTotalPartida = document.querySelector("#contadorTotal");
+ contadorTotalPartida.innerHTML=segons;
+ 
+
+ contadorRetard();
 
 
 
 
 
-  function pausa(c1, c2, c1p, c2p) {
+ function contadorRetard() {
+
+
+  setTimeout(contador, 1000);
+
+
+  function contador() {
+    segons++;
+    //var contadorTotalPartida = document.querySelector("#contadorTotal");
+    contadorTotalPartida.innerHTML=segons;
+    contadorRetard();
+
+    
+
+  }
+}
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ function pausa(c1, c2, c1p, c2p) {
 
 
     setTimeout(amaga, 1000);
@@ -136,6 +183,16 @@ window.addEventListener("load", function (event) {
 
     }
   }
+
+
+
+
+
+  
+
+
+
+
 
 
   
@@ -169,12 +226,19 @@ window.addEventListener("load", function (event) {
 
 
         if (quinJugador==jugadors.length+1) {
-          quinJugador=1
+          quinJugador=1;
           //console.log("jug num en cas de que es passa"+quinJugador)
         }
+
+
+       
+
+       
+
+
         // console.log("jug num act"+quinJugador)
 
-        console.log("Jugador: "+jugadors[quinJugador-1]);
+        //console.log("Jugador: "+jugadors[quinJugador-1]);
         //console.log("torn "+torn);
 
         carta1SRC = cartaImatge.getAttribute('src');
@@ -191,6 +255,58 @@ window.addEventListener("load", function (event) {
 
 
       case 2:
+
+      
+        // quinJugador++;
+        // //console.log("JUG NUM"+quinJugador)
+
+
+        // if (quinJugador==jugadors.length+1) {
+        //   quinJugador=1;
+        //   //console.log("jug num en cas de que es passa"+quinJugador)
+        // }
+
+
+        // if (quinJugador==jugadors.length) {
+        //   console.log("li toca a: "+jugadors[0]);
+        // }
+        // else{
+        //   console.log("li toca a: "+jugadors[quinJugador]);
+        // }
+      
+
+
+
+
+
+        // quinJugador++;
+        // //console.log("JUG NUM"+quinJugador)
+
+
+        // // if (quinJugador==jugadors.length+1) {
+        // //   quinJugador=1
+        // //   //console.log("jug num en cas de que es passa"+quinJugador)
+        // // }
+
+        // if (quinJugador==jugadors.length+1) {
+        //   quinJugador=0;
+        //   //console.log("jug num en cas de que es passa"+quinJugador)
+        // }
+
+
+
+
+      // if (jugadors.length==) {
+        
+      // }
+
+
+      // if (quinJugador==0) {
+        
+      // }
+        //aQuiliToca.innerHTML=jugadors[quinJugador-1];
+        
+
 
         //console.log("torn "+torn);
         carta2SRC = cartaImatge.getAttribute('src');
@@ -222,11 +338,21 @@ window.addEventListener("load", function (event) {
 
             modParellesTrobades.innerHTML = puntuacions[quinJugador-1];
 
+            //console.log("li toca a: "+jugadors[quinJugador-1]);
+
+            
+
+            
+
+            
 
             parellaTrobada=0;
             torn = 0;
+
+            
             quinJugador--;
 
+            
 
 
             if (parellesTotalsTrobades==parelles) {
@@ -259,7 +385,25 @@ window.addEventListener("load", function (event) {
           pausa(carta1, carta2, carta1Poker, carta2Poker);
         }
 
-        console.log("Puntuació: "+puntuacions[quinJugador-1]);
+
+
+        if (quinJugador==jugadors.length) {
+          //console.log("li toca a: "+jugadors[0]);
+          aQuiliToca.innerHTML=jugadors[0];
+        }
+        else{
+          //console.log("li toca a: "+jugadors[quinJugador]);
+          aQuiliToca.innerHTML=jugadors[quinJugador];
+        }
+
+
+        // if (quinJugador==) {
+          
+        // }
+
+        //console.log('jugador'+quinJugador);
+        //console.log("Li toca a "+jugadors[quinJugador]);
+        //console.log("Puntuació: "+puntuacions[quinJugador-1]);
         break;
 
 
