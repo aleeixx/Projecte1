@@ -88,12 +88,12 @@ window.addEventListener("load", function (event) {
 
 
   var carta1;
-  var carta1SRC;
+  
   var carta1Poker;
   var cela1;
 
   var carta2;
-  var carta2SRC;
+  
   var carta2Poker;
   var cela2;
 
@@ -148,6 +148,27 @@ window.addEventListener("load", function (event) {
 
 
   
+  function primerCas(cartaImatge,cartapoker,cela){
+    quinJugador++;
+    if (quinJugador==jugadors.length+1) {
+      quinJugador=1;
+    }
+
+    
+    carta1 = cartaImatge;
+    carta1Poker = cartapoker;
+    cela1 = cela;
+
+    carta1Poker.classList.add("amaga");
+    carta1.classList.remove("amaga");
+
+  }
+
+
+  
+
+
+
 
   function Mostra() {
 
@@ -169,28 +190,13 @@ window.addEventListener("load", function (event) {
     switch (torn) {
       case 1:
 
-      quinJugador++;
-        if (quinJugador==jugadors.length+1) {
-          quinJugador=1;
-        }
-
-        carta1SRC = cartaImatge.getAttribute('src');
-        carta1 = cartaImatge;
-        carta1Poker = cartapoker;
-        cela1 = cela;
-
-        carta1Poker.classList.add("amaga");
-        carta1.classList.remove("amaga");
-
+        primerCas(cartaImatge,cartapoker,cela);
 
         break;
 
 
       case 2:
 
-
-
-        carta2SRC = cartaImatge.getAttribute('src');
         carta2 = cartaImatge;
         carta2Poker = cartapoker;
         cela2 = cela;
@@ -201,7 +207,7 @@ window.addEventListener("load", function (event) {
         carta2.classList.remove("amaga");
 
 
-        if (carta1SRC === carta2SRC) {
+        if (carta1.getAttribute('src') === carta2.getAttribute('src')) {
 
 
           if (carta1.getAttribute('id') != carta2.getAttribute('id')) {

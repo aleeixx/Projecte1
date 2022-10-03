@@ -1,7 +1,11 @@
 body {
-  
-  background-image: url("imatges/fons.jpg")
+  background-color: rgb(255, 255, 255);
+ /* background-image: url("imatges/fons.jpg")*/
 }
+
+
+
+/* Formulari */
 
 .formulari {
   width: 400px;
@@ -58,3 +62,117 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
+ /*tauler*/
+
+ body{
+  /*background-image: url("imatges/fons.jpg")*/
+  background-color: black;
+}
+
+#dTable{
+  display: inline-block;
+  
+  margin-left: 25%;
+  
+  /*margin: 0 auto;*/
+  width: 50%;
+  
+}
+
+#dreta{
+  color: white;
+  display: inline-block;
+  position: absolute;
+  margin-top: 3em;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 25px;
+  
+}
+
+#dades{
+  
+  display: inline-block;
+  color: white;
+  position: absolute;
+  margin-top: 4.9em;
+  margin-left: 5%;
+  font-size: 12.1px;
+
+}
+
+#contadorTotal{
+  margin-top: 20.5em;
+}
+
+.titols{
+  display: inline-block;
+  font-size: 0.800em;
+}
+.numeros{
+  display: inline-block;
+  font-size: 1.5em;
+  margin-left: 1em;
+}
+
+table{
+  text-align: center;
+  padding: 5em;
+}
+img{
+  width: 100%;
+}
+.poker{
+  
+}
+.parella{
+}
+
+.amaga{
+  display: none;
+}
+
+td{
+  
+  padding: 2em;
+  background-color: white;
+}
+
+/* en cas de error.... */
+
+
+#malament{
+  display: inline-block;
+  margin-top: 18em;
+  margin-left: 33em;
+  text-align: center;
+  background-color: rgb(33, 16, 132);
+  border: 4px solid red;
+  border-radius: 15px;
+  padding: 10px;
+  color: #ddd;
+    
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/*
+
+
+
+
+

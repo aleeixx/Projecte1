@@ -1,5 +1,10 @@
 <?php 
 
+
+
+
+
+
 //Crearem un array on guardarem un string amb el nom de les imatges
 $imatges = array("couple1.png", 
                  "couple2.png", 
@@ -85,7 +90,7 @@ PROVES:
 <html>
  <head>
   <title>Prova</title>
-  <link rel="stylesheet" href="tauler.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
   <script>
     let jugadors=<?php echo json_encode($jugadors);?>;
     let parelles=<?php echo $nParelles;?>;
