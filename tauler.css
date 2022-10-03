@@ -1,22 +1,42 @@
 body{
-    background-image: url("imatges/fons.jpg")
+    /*background-image: url("imatges/fons.jpg")*/
+    background-color: black;
 }
 
 #dTable{
     display: inline-block;
-    margin-left: 40px;
+    
+    margin-left: 25%;
+    
     /*margin: 0 auto;*/
     width: 50%;
     
 }
 
 #dreta{
-    background-color: white;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    margin-top: 3em;
+    margin-left: 10%;
+    text-align: center;
+    font-size: 25px;
+    
 }
 
 #dades{
+    
     display: inline-block;
     color: white;
+    position: absolute;
+    margin-top: 4.9em;
+    margin-left: 5%;
+    font-size: 12.1px;
+
+}
+
+#contadorTotal{
+    margin-top: 20.5em;
 }
 
 .titols{

@@ -34,7 +34,7 @@ if($familia=="Random"){
 //Si el número no és parell/múltiple de dos...
 
 //falla si poses 6 per 4 pq 24 la meitat es 12 i no hi ha tants elements a larray max 8 es a dir 4*4 que es 16 i son 8 parelles el num delements de larray
-if($_POST["columnes"]*$_POST["files"]%2==0 and $_POST["columnes"]*$_POST["files"]<=16 and $_POST["columnes"]*$_POST["files"]>1){
+if($_POST["columnes"]*$_POST["files"]%2==0 and $_POST["columnes"]*$_POST["files"]<=20 and $_POST["columnes"]*$_POST["files"]>1){
 
     
 
@@ -97,7 +97,7 @@ PROVES:
  </head>
  <body>
 
-
+<div id="TOTAL">
  <div id="dades">
 
     
@@ -165,9 +165,9 @@ echo "</table> </div>";
 
     <div id="liTocaAContenidor">
         <div>
-        <h1>
+       
             Torn de:
-        </h1>
+        
         </div>
         
         <div id="liTocaA">
@@ -183,7 +183,7 @@ echo "</table> </div>";
     </div>
 
 </div>
-
+</div>
 <?php
 }
 else{
